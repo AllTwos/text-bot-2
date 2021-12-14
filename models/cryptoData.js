@@ -17,7 +17,7 @@ const cryptoSchema = new Schema(
     },
     preVal: {
       type: Number,
-      required: true,
+      required: false,
     },
     addVal: {
       type: Number,

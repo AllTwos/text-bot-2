@@ -145,6 +145,13 @@ const birthdays = [
     type: "Anniversary",
   },
   {
+    id: 35,
+    name: "Aaron",
+    date: "May24",
+    phone: process.env.AARON_MAL_PHONE,
+    type: "Birthday",
+  },
+  {
     id: 16,
     name: "Jeff and Melissa",
     date: "May26",
