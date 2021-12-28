@@ -2,7 +2,7 @@ const birthdays = [
   //Test
   // {
   //   id: 999,
-  //   name: "Guy Honkey",
+  //   name: "Test Testman",
   //   date: "Nov29",
   //   phone: process.env.MY_PHONE,
   //   type: "Anniversary",

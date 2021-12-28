@@ -9,10 +9,9 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
-//Token to keep from repeated firing
 let bdayToken = "";
 
-//Find Birthday (give func its own file)
+//Find Birthday
 function findBirthday(date) {
   if (
     bdayToken !== date.monthDay &&
