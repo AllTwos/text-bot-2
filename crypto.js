@@ -116,10 +116,4 @@ async function twilioCrypto(date) {
   console.log(`Fired Crypto func date:${date.monthDay} , ${date.seconds}`);
 }
 
-// (async () => {
-//   console.log(`GME: ${await getMarketWatchPriceFeed("gme")}`);
-//   console.log(`ETH: ${await getCoinMarketCapPrice("ethereum")}`);
-//   console.log(`ICON: ${await getCoinMarketCapPrice("icon")}`);
-// })();
-
 module.exports = { twilioCrypto, cryptoData };

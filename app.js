@@ -39,6 +39,7 @@ setInterval(async () => {
 }, 1830000);
 
 //Mentor Fetch 2 min.
-setInterval(async () => {
-  fetchFlairText("OFFERING TO MENTOR");
-}, 120000);
+// setInterval(async () => {
+//   fetchFlairText("OFFERING TO MENTOR");
+// }, 3000);
+//120000
