@@ -33,22 +33,26 @@ async function fetchFlairText(text) {
         val.created_utc > redditCreatedToken
       ) {
         //Send Text
-        // client.messages
-        //   .create({
-        //     body: `title: ${val.title} || created: ${val.created_utc} || self text: ${val.selftext}`,
-        //     to: "+" + process.env.MY_PHONE,
-        //     from: "+" + process.env.TWILIO_PHONE,
-        //   })
-        //   .then((message) => {
-        //     console.log(message);
-        //   });
+        client.messages
+          .create({
+            body: `title: ${val.title} || created: ${
+              val.created_utc
+            } || self text: ${val.selftext.substr(0, 1000)}`,
+            to: "+" + process.env.MY_PHONE,
+            from: "+" + process.env.TWILIO_PHONE,
+          })
+          .then((message) => {
+            console.log(message);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
 
-        // //Find and Update with mongo
-        // await Mentor.findOneAndUpdate(
-        //   { name: "mentorToken" },
-        //   { value: val.created_utc }
-        // );
-        console.log(val.selftext);
+        //Find and Update with mongo
+        await Mentor.findOneAndUpdate(
+          { name: "mentorToken" },
+          { value: val.created_utc }
+        );
       }
     }
   } catch (err) {
@@ -57,7 +61,6 @@ async function fetchFlairText(text) {
         " ,failure to launch starring Matthew McConaughey and Sarah Jemmikus Parker"
     );
   }
-  console.log("fired mentor func");
 }
 
 module.exports = fetchFlairText;
