@@ -34,7 +34,6 @@ async function getCoinMarketCapPrice(subDir) {
       $(elmSelector).children().text().replace(/[$,]/g, "")
     );
 
-    // need to ditch the $ on the price strings
     return price;
   } catch (err) {
     console.error(err);
