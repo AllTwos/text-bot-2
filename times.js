@@ -36,8 +36,3 @@ function getTime(newDate) {
 module.exports = {
   getTime,
 };
-
-//test dates:  new Date("05-14-2022")
-//Interval of 10 min 600000  20 min 1200000 30 min 1800000  1hr 3600000
-
-// https://www.calculateme.com/time/minutes/to-milliseconds/10
