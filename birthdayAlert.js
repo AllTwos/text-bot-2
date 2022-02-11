@@ -1,4 +1,5 @@
 require("dotenv").config();
+const Birthday = require("./models/bdayData");
 
 //My data
 const bdayta = require("./bdayta");
@@ -9,17 +10,22 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = require("twilio")(accountSid, authToken);
 
-let bdayToken = "";
+//Grabbing bday data token
+async function grabDate() {
+  try {
+    return await Birthday.find();
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 //Find Birthday
-function findBirthday(date) {
-  if (
-    bdayToken !== date.monthDay &&
-    date.time >= 13 &&
-    date.time < 16
-    // date.min >= 37
-  ) {
-    console.log("passed");
+async function findBirthday(date) {
+  const result = await grabDate();
+  const bdayToken = result[0].date;
+
+  if (bdayToken !== date.monthDay && date.time >= 13 && date.time < 16) {
+    console.log("PASSED BDAY CHECK");
     for (let birthday of birthdays) {
       const bdayMessage = `Happy ${birthday.type} ${
         birthday.name
@@ -45,11 +51,15 @@ function findBirthday(date) {
           .catch((err) => console.log(err));
       }
     }
-    bdayToken = date.monthDay;
+    //update date token
+    await Birthday.findOneAndUpdate(
+      { date: bdayToken },
+      { date: date.monthDay }
+    );
   }
 
   console.log(
-    `fired func ${date.monthDay} ${date.time} ${date.min} ${date.seconds} token:${bdayToken} `
+    `fired Bday func ${date.monthDay} ${date.time} ${date.min} ${date.seconds} token:${bdayToken} `
   );
 }
 

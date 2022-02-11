@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 });
 
 // //Birthday Fetch , 30 min.
-setInterval(() => {
+setInterval(async () => {
   findBirthday(timeReq.getTime(new Date()));
 }, 1800000);
 
