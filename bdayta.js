@@ -3,9 +3,9 @@ const birthdays = [
   // {
   //   id: 999,
   //   name: "Test Testman",
-  //   date: "Nov29",
+  //   date: "Jan8",
   //   phone: process.env.MY_PHONE,
-  //   type: "Anniversary",
+  //   type: "Test day",
   // },
 
   //January
@@ -53,13 +53,13 @@ const birthdays = [
     phone: process.env.DAD_PHONE,
     type: "Birthday",
   },
-  {
-    id: 7,
-    name: "Andy",
-    date: "Feb11",
-    phone: process.env.ANDY_PHONE,
-    type: "Birthday",
-  },
+  // {
+  //   id: 7,
+  //   name: "Andy",
+  //   date: "Feb11",
+  //   phone: process.env.ANDY_PHONE,
+  //   type: "Birthday",
+  // },
   {
     id: 8,
     name: "Melissa",
