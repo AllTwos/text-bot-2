@@ -3,8 +3,8 @@ const birthdays = [
   {
     id: 999,
     name: "Test Testman",
-    date: "Feb11",
-    phone: process.env.MY_PHONE,
+    date: "Feb12",
+    phone: process.env.HOLLY_PHONE,
     type: "Test day",
   },
 
