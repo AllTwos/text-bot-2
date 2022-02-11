@@ -1,12 +1,12 @@
 const birthdays = [
   //Test
-  // {
-  //   id: 999,
-  //   name: "Test Testman",
-  //   date: "Nov29",
-  //   phone: process.env.MY_PHONE,
-  //   type: "Anniversary",
-  // },
+  {
+    id: 999,
+    name: "Test Testman",
+    date: "Feb11",
+    phone: process.env.MY_PHONE,
+    type: "Test day",
+  },
 
   //January
   {
