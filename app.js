@@ -42,3 +42,5 @@ setInterval(async () => {
 setInterval(async () => {
   fetchFlairText("OFFERING TO MENTOR");
 }, 120000);
+
+console.log("mongo branch");
