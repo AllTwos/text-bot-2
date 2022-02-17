@@ -186,6 +186,13 @@ const birthdays = [
 
   //Aug
   {
+    id: 36,
+    name: "Sue",
+    date: "Aug4",
+    phone: process.env.SUE_GARDENER_PHONE,
+    type: "Birthday",
+  },
+  {
     id: 20,
     name: "Gramps",
     date: "Aug4",
@@ -272,7 +279,7 @@ const birthdays = [
   },
 ];
 
-//id@35
+//id@36
 
 module.exports = {
   birthdays: birthdays,
