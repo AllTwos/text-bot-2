@@ -3,12 +3,14 @@ const mongoose = require("mongoose");
 
 require("dotenv").config();
 
+const PORT = process.env.PORT || 4000;
+
 //Connect to mongodb
 mongoose
   .connect(process.env.DB_CONNECT_STR)
   .then((result) => {
     //Listening
-    app.listen(process.env.PORT || 4000, () => {
+    app.listen(PORT, () => {
       console.log(`listening on port`);
     });
 
