@@ -30,15 +30,15 @@ app.get("/", (req, res) => {
   res.send("The Son of TOJO bot is twiddling in the background");
 });
 
-// //Birthday Fetch , 30 min.
+// //Birthday Fetch , 5 min.
 setInterval(async () => {
   findBirthday(timeReq.getTime(new Date()));
-}, 1800000);
+}, 300000);
 
-// //Crypto Fetch , 30ish min.
+// //Crypto Fetch , 5ish min.
 setInterval(async () => {
   twilioCrypto(timeReq.getTime(new Date()));
-}, 1830000);
+}, 400000);
 
 //Mentor Fetch 2 min.
 setInterval(async () => {
