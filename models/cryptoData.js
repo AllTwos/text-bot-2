@@ -23,6 +23,10 @@ const cryptoSchema = new Schema(
       type: Number,
       required: true,
     },
+    minVal: {
+      type: Number,
+      required: true,
+    },
     dateToken: {
       type: String,
       required: true,
