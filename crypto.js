@@ -70,7 +70,8 @@ async function twilioCrypto(date) {
   let msg = "";
 
   await cryptoDataGet.map(async (crypto) => {
-    let { id, name, value, addVal, dateToken, fetch, prevDate } = crypto;
+    let { id, name, value, addVal, dateToken, fetch, prevDate, minVal } =
+      crypto;
 
     //checking current value
     let checkValue = undefined;

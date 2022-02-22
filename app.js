@@ -38,7 +38,7 @@ setInterval(async () => {
 // //Crypto Fetch , 5ish min.
 setInterval(async () => {
   twilioCrypto(timeReq.getTime(new Date()));
-}, 400000);
+}, 380000);
 
 //Mentor Fetch 2 min.
 setInterval(async () => {
