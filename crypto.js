@@ -89,7 +89,7 @@ async function twilioCrypto(date) {
     ) {
       console.log(`Texting ${name} and updating db`);
 
-      checkValue > value + addVal ? (msg = "went UP!") : (msg = "went DOWN!");
+      checkValue > value + addVal ? (msg = "went UP!!") : (msg = "went DOWN!");
 
       await Crypto.findOneAndUpdate(
         { name: name },
