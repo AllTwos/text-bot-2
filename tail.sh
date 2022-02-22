@@ -1,0 +1,1 @@
+heroku logs --tail --app son-of-tojo-text-bot
