@@ -67,6 +67,8 @@ async function twilioCrypto(date) {
 
   const cryptoDataGet = await cryptoData();
 
+  let msg = "";
+
   await cryptoDataGet.map(async (crypto) => {
     let { id, name, value, addVal, dateToken, fetch, prevDate } = crypto;
 
@@ -81,8 +83,13 @@ async function twilioCrypto(date) {
         break;
     }
 
-    if (date.time > 13 && date.time < 24 && checkValue > value + addVal) {
+    if (
+      (date.time > 13 && date.time < 24 && checkValue > value + addVal) ||
+      (date.time > 13 && date.time < 24 && checkValue <= value - minVal)
+    ) {
       console.log(`Texting ${name} and updating db`);
+
+      checkValue > value + addVal ? (msg = "went UP!") : (msg = "went DOWN!");
 
       await Crypto.findOneAndUpdate(
         { name: name },
@@ -101,7 +108,7 @@ async function twilioCrypto(date) {
         const newPrevDate = await valFetch[0].prevDate;
         await client.messages
           .create({
-            body: `${name} went up! - value: ${newVal}, date: ${newDateToken}, last update ${newPrevDate}`,
+            body: `${name} ${msg} - value: ${newVal}, date: ${newDateToken}, last update ${newPrevDate}`,
             to: "+" + number,
             from: "+" + process.env.TWILIO_PHONE,
           })
