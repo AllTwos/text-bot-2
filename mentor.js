@@ -19,7 +19,9 @@ async function fetchFlairText(text) {
     const getMentorData = await mentorFind();
     let redditCreatedToken = getMentorData.value;
 
-    const res = await fetch("https://www.reddit.com/r/programmingbuddies.json");
+    const res = await fetch(
+      "https://www.reddit.com/r/ProgrammingBuddies/new.json"
+    );
     const response = await res.json();
     const data = response.data.children;
 
