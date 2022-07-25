@@ -112,6 +112,13 @@ const birthdays = [
     phone: process.env.MOM_PHONE,
     type: "Birthday",
   },
+  {
+    id: 13,
+    name: "Sam",
+    date: "Mar20",
+    phone: process.env.SAM_PHONE,
+    type: "Birthday",
+  },
 
   //April
   {
