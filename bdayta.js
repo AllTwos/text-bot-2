@@ -113,10 +113,10 @@ const birthdays = [
     type: "Birthday",
   },
   {
-    id: 13,
+    id: 37,
     name: "Sam",
     date: "Mar20",
-    phone: process.env.SAM_PHONE,
+    phone: process.env.SAM_MW_PHONE,
     type: "Birthday",
   },
 
@@ -286,7 +286,7 @@ const birthdays = [
   },
 ];
 
-//id@36
+//id@37
 
 module.exports = {
   birthdays: birthdays,
