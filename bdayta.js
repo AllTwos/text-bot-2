@@ -250,7 +250,7 @@ const birthdays = [
   {
     id: 24,
     name: "Jeff",
-    date: "",
+    date: "Nov17",
     phone: process.env.JEFF_PHONE,
     type: "Birthday",
   },
