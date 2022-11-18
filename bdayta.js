@@ -249,7 +249,7 @@ const birthdays = [
   },
   {
     id: 24,
-    name: "Jeff",
+    name: "Jeff Rodnam Schoopoo",
     date: "Nov17",
     phone: process.env.JEFF_PHONE,
     type: "Birthday",
