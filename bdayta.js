@@ -264,13 +264,6 @@ const birthdays = [
     type: "Birthday",
   },
   {
-    id: 32,
-    name: "Jane",
-    date: "Dec5",
-    phone: process.env.JANE_PHONE,
-    type: "Birthday",
-  },
-  {
     id: 30,
     name: "Cole",
     date: "Dec11",
